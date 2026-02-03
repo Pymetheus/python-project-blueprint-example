@@ -1,4 +1,4 @@
-app_name = "[[REPO_NAME]]"
+app_name = "python-project-blueprint-example"
 
 [database]
 host = "db.develop.com"

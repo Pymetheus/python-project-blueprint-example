@@ -1,10 +1,10 @@
 # Security Policy
-We take the security and integrity of the **[[REPO_NAME]]** seriously.
+We take the security and integrity of the **python-project-blueprint-example** seriously.
 If you believe you have found a security vulnerability, please report it to us as described below.
 
 ## Supported Versions
 
-Currently only the 0.1.0 version of the **[[REPO_NAME]]** is supported.
+Currently only the 0.1.0 version of the **python-project-blueprint-example** is supported.
 
 | Version | Supported          |
 |---------| ------------------ |
@@ -15,8 +15,8 @@ Currently only the 0.1.0 version of the **[[REPO_NAME]]** is supported.
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Please report security vulnerabilities via [Email](mailto:[[EMAIL]]) and include a subject line like:
-`SECURITY: Vulnerability report for [[REPO_NAME]]`
+Please report security vulnerabilities via [Email](mailto:blueprint@example.com) and include a subject line like:
+`SECURITY: Vulnerability report for python-project-blueprint-example`
 
 You will receive a response from us within 48 hours.
 If the issue is confirmed, we will release a patch as soon as possible depending on complexity

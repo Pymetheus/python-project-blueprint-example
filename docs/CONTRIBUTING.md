@@ -1,9 +1,9 @@
-## How to contribute to [[REPO_NAME]]
+## How to contribute to python-project-blueprint-example
 
 #### **Did you find a bug?**
 
-* Search to see if the bug was already reported under [Issues](https://github.com/[[USERNAME]]/[[REPO_NAME]]/issues).
-* If not, [open a new issue](https://github.com/[[USERNAME]]/[[REPO_NAME]]/issues/new) with a clear title and description.
+* Search to see if the bug was already reported under [Issues](https://github.com/Pymetheus/python-project-blueprint-example/issues).
+* If not, [open a new issue](https://github.com/Pymetheus/python-project-blueprint-example/issues/new) with a clear title and description.
 
 #### **Did you write a patch that fixes a bug?**
 
@@ -31,4 +31,4 @@
 
 #### **Do you have questions about the source code?**
 
-* Ask any question about how to use [[REPO_NAME]] by [Email](mailto:[[EMAIL]]).
+* Ask any question about how to use python-project-blueprint-example by [Email](mailto:blueprint@example.com).

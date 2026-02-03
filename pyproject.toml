@@ -1,12 +1,12 @@
 [project]
-name = "DISTRIBUTION-NAME"
+name = "python-project-blueprint-example"
 version = "0.1.0"
-description = "[[DESCRIPTION]]"
+description = "Example of how to use the Python Project Blueprint"
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.12"
 license = {"file" = "LICENSE.md"}
 authors = [
-    { name = "[[USERNAME]]", email = "AUTHOR@EXAMPLE.COM" }
+    { name = "Pymetheus", email = "blueprint@example.com" }
 ]
 
 classifiers = [
@@ -30,13 +30,13 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/[[USERNAME]]/[[REPO_NAME]]"
-Repository = "https://github.com/[[USERNAME]]/[[REPO_NAME]]"
-Documentation = "https://github.com/[[USERNAME]]/[[REPO_NAME]]/blob/main/docs/DOCUMENTATION.md"
-Issues = "https://github.com/[[USERNAME]]/[[REPO_NAME]]/issues"
+Homepage = "https://github.com/Pymetheus/python-project-blueprint-example"
+Repository = "https://github.com/Pymetheus/python-project-blueprint-example"
+Documentation = "https://github.com/Pymetheus/python-project-blueprint-example/blob/main/docs/DOCUMENTATION.md"
+Issues = "https://github.com/Pymetheus/python-project-blueprint-example/issues"
 
 [project.scripts]
-DISTRIBUTION-NAME = "package_name.main:main"
+python-project-blueprint-example = "python_project_blueprint_example.main:main"
 
 [build-system]
 requires = ["setuptools>=68.0"]
@@ -44,7 +44,7 @@ build-backend = "setuptools.build_meta"
 
 
 [tool.setuptools.packages.find]
-where = ["src"]  # Essential for the src-layout to find 'package_name'
+where = ["src"]  # Essential for the src-layout to find 'python_project_blueprint_example'
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
@@ -127,12 +127,12 @@ indent-style = "space"
 line-ending = "auto"
 
 [tool.ruff.lint.isort]
-known-first-party = ["package_name"]
+known-first-party = ["python_project_blueprint_example"]
 
 [tool.mypy]
 python_version = "3.12"
 mypy_path = "src"
-files = "src/package_name"
+files = "src/python_project_blueprint_example"
 explicit_package_bases = true
 namespace_packages = true
 

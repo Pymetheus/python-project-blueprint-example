@@ -10,10 +10,10 @@ def test_main_runs_as_script(monkeypatch):
     """
 
     # Patch setup_logging to avoid side effects
-    monkeypatch.setattr("package_name.main.setup_logging", lambda *args, **kwargs: None)
+    monkeypatch.setattr("python_project_blueprint_example.main.setup_logging", lambda *args, **kwargs: None)
 
     # Remove the already imported module to avoid warnings
-    sys.modules.pop("package_name.main", None)
+    sys.modules.pop("python_project_blueprint_example.main", None)
 
-    # Execute as if run via `python -m package_name.main`
-    runpy.run_module("package_name.main", run_name="__main__")
+    # Execute as if run via `python -m python_project_blueprint_example.main`
+    runpy.run_module("python_project_blueprint_example.main", run_name="__main__")

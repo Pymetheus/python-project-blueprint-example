@@ -10,8 +10,8 @@ from pathlib import Path
 
 import structlog
 
-from package_name.utils.config import Settings
-from package_name.utils.logger import setup_logging
+from python_project_blueprint_example.utils.config import Settings
+from python_project_blueprint_example.utils.logger import setup_logging
 
 logger: structlog.stdlib.BoundLogger = structlog.get_logger(__name__)
 
