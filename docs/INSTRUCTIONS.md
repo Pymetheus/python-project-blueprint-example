@@ -95,7 +95,7 @@ python-project-blueprint/
 ├── notebooks/                      # Exploratory research & prototyping
 ├── res/                            # Static resources (images, etc.)
 ├── src/
-│   └── package_name                # Core logic
+│   └── python_project_blueprint_example                # Core logic
 │       ├── utils/                  # Shared utilities
 │       │   ├── __init__.py
 │       │   ├── config.py
@@ -124,7 +124,7 @@ strict naming conventions are enforced.
 | Used for                            | Style      | Example                            |
 |-------------------------------------|------------|------------------------------------|
 | GitHub repo, PyPI name, CLI command | kebab-case | `python-project-blueprint`         |
-| Python package, Python files        | snake_case | `package_name`, `template_code.py` |
+| Python package, Python files        | snake_case | `python_project_blueprint_example`, `template_code.py` |
 | Docker image                        | kebab-case | `template-app:latest`              |
 
 ---
@@ -133,7 +133,7 @@ strict naming conventions are enforced.
 This directory orchestrates the application's configuration using a **Layered Configuration Strategy**.
 This ensures a clean separation between structural application settings (TOML) and sensitive credentials (.env).
 
-The configuration loading logic (found in `src/package_name/utils/config.py`) follows this hierarchy, where lower layers override upper ones:
+The configuration loading logic (found in `src/python_project_blueprint_example/utils/config.py`) follows this hierarchy, where lower layers override upper ones:
 
 1.  **Pydantic Defaults:** Defined in the code (failsafe values).
 2.  **`config.{APP_ENV}.toml`:** Structural configuration (ports, hosts, feature flags). **Committed to Git.**
@@ -156,12 +156,12 @@ The system will then automatically look for `config.prod.toml` and `.env.prod`.
 # Linux / macOS
 APP_ENV=prod
 pip install -e .
-python -m package_name.main
+python -m python_project_blueprint_example.main
 
 # Windows (PowerShell)
 $env:APP_ENV = "prod"
 pip install -e .
-python -m package_name.main
+python -m python_project_blueprint_example.main
 ```
 
 ---
@@ -175,7 +175,7 @@ This directory is strictly ignored by Git to prevent accidental leakage of logs,
 - **`mypy_cache/`**: Stores incremental type-checking data to significantly speed up subsequent `mypy` runs by only analyzing changed files.
 
 ### Advanced Logging Features
-The logger (configured in `src/package_name/utils/logger.py`) includes several production-grade processors:
+The logger (configured in `src/python_project_blueprint_example/utils/logger.py`) includes several production-grade processors:
 
 * **Security Masking:** An automated `mask_sensitive_data` processor scans log events for keys like `password` and replaces them with `********` to prevent credential leakage.
 * **Environment Context:** Every log entry is automatically tagged with the current `APP_ENV` via a dedicated processor, making it easy to filter logs.
@@ -445,7 +445,7 @@ By isolating these from the `src/` directory, the project remains clean, portabl
 The `src/` directory houses the actual source code of the project.
 By using the **src-layout**, we ensure that the code is only importable when properly installed, preventing common packaging bugs and ensuring a clean separation between the project root and the application logic.
 
-### Internal Structure: `src/package_name/`
+### Internal Structure: `src/python_project_blueprint_example/`
 The internal structure follows a modular design to keep the source code of your application organized:
 
 * **`main.py`**: The central entry point for the application. It orchestrates the startup, including configuration loading and logger initialization.

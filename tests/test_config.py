@@ -1,7 +1,7 @@
 import tomllib
 from unittest.mock import MagicMock, patch
 
-from src.package_name.utils.config import Settings
+from src.python_project_blueprint_example.utils.config import Settings
 
 
 def test_settings_load_from_toml(clean_env):
@@ -28,7 +28,7 @@ def test_settings_invalid_toml_fallback(clean_env):
         patch("tomllib.load", side_effect=tomllib.TOMLDecodeError("Bad TOML")),
     ):
         settings = Settings.load()
-        assert settings.app_name == "package_name"
+        assert settings.app_name == "python_project_blueprint_example"
 
 
 def test_settings_unexpected_toml_fallback(clean_env):
@@ -40,14 +40,14 @@ def test_settings_unexpected_toml_fallback(clean_env):
         patch("tomllib.load", side_effect=Exception),
     ):
         settings = Settings.load()
-        assert settings.app_name == "package_name"
+        assert settings.app_name == "python_project_blueprint_example"
 
 
 def test_settings_default_fallback(clean_env):
     """Test that settings return defaults when no file exists."""
     with patch("pathlib.Path.exists", return_value=False):
         settings = Settings.load()
-        assert settings.app_name == "package_name"
+        assert settings.app_name == "python_project_blueprint_example"
 
 
 def test_settings_pydantic_validation_error_fallback(clean_env):
@@ -63,4 +63,4 @@ def test_settings_pydantic_validation_error_fallback(clean_env):
         settings = Settings.load()
 
         assert settings.database.port == 1111
-        assert settings.app_name == "package_name"
+        assert settings.app_name == "python_project_blueprint_example"

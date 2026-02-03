@@ -60,7 +60,7 @@ install your project using the package manager of your choice:
   - `uv pip install -e ".[dev]"`.
   - `poetry install --extras dev`.
 - [ ] **USER:** Run `pre-commit install`.
-- [ ] **USER:** Run the application `python -m <package_name>.main`.
+- [ ] **USER:** Run the application `python -m <python_project_blueprint_example>.main`.
 
 > **Note:** *Git must be installed, and you must be inside the cloned Git repository.*
 
@@ -81,7 +81,7 @@ Otherwise, delete the commented-out lines.
 ### Configuration Management
 - [ ] **USER:** Rename `.config/.env.example` to `.config/.env.dev` and update required secrets.
 - [ ] **USER:** Update required application settings in `.config/config.dev.toml`.
-- [ ] **USER:** Update values to match your `.env.dev` and `.config/config.dev.toml` settings in `src/<your_package_name>/utils/config.py`.
+- [ ] **USER:** Update values to match your `.env.dev` and `.config/config.dev.toml` settings in `src/<your_python_project_blueprint_example>/utils/config.py`.
 
 ### Project Documents
 - [ ] **USER:** Delete `.gitkeep` in `data/`, `notebooks/` and `res/` if applicable, empty directories will disappear from GitHub.
@@ -99,38 +99,38 @@ Finally, the bootstrapping specific documents are deleted, leaving you with a cl
 The workflow automatically updates the following sections:
 
 ### Setting up `.config/`
-- [x] **BOOTSTRAP:** Update [[REPO_NAME]] in `.config/config.dev.toml`.
+- [x] **BOOTSTRAP:** Update python-project-blueprint-example in `.config/config.dev.toml`.
 
 ### Setting up `.github/`
-- [x] **BOOTSTRAP:** Update [[USERNAME]] in `.github/CODEOWNERS` file to reflect ownership of repository creator.
-- [x] **BOOTSTRAP:** Update [[USERNAME]] in `.github/dependabot.yml` to reflect reviewers & assignees.
+- [x] **BOOTSTRAP:** Update Pymetheus in `.github/CODEOWNERS` file to reflect ownership of repository creator.
+- [x] **BOOTSTRAP:** Update Pymetheus in `.github/dependabot.yml` to reflect reviewers & assignees.
 
 > **Note:** *If ownership, reviewers or assignees are different to the repository creator, this needs to be manually updated.*
 
 ### Setting up `docker/`
-- [x] **BOOTSTRAP:** Update [[PACKAGE_NAME]] in `docker/docker-compose.yml` & `docker/Dockerfile`.
+- [x] **BOOTSTRAP:** Update python_project_blueprint_example in `docker/docker-compose.yml` & `docker/Dockerfile`.
 
 ### Setting up `docs/`
-- [x] **BOOTSTRAP:** Update [[EMAIL]] in `docs/CODE_OF_CONDUCT.md` to reflect correct contact.
-- [x] **BOOTSTRAP:** Update [[REPO_NAME]] in `docs/CONTRIBUTING.md` to reflect correct repository name.
-- [x] **BOOTSTRAP:** Update [[USERNAME]] in `docs/CONTRIBUTING.md` to reflect correct username.
-- [x] **BOOTSTRAP:** Update [[EMAIL]] in `docs/CONTRIBUTING.md` to reflect correct contact.
-- [x] **BOOTSTRAP:** Update [[REPO_NAME]] in `docs/SECURITY.md` to reflect correct repository name.
-- [x] **BOOTSTRAP:** Update [[EMAIL]] in `docs/SECURITY.md` to reflect correct contact.
+- [x] **BOOTSTRAP:** Update blueprint@example.com in `docs/CODE_OF_CONDUCT.md` to reflect correct contact.
+- [x] **BOOTSTRAP:** Update python-project-blueprint-example in `docs/CONTRIBUTING.md` to reflect correct repository name.
+- [x] **BOOTSTRAP:** Update Pymetheus in `docs/CONTRIBUTING.md` to reflect correct username.
+- [x] **BOOTSTRAP:** Update blueprint@example.com in `docs/CONTRIBUTING.md` to reflect correct contact.
+- [x] **BOOTSTRAP:** Update python-project-blueprint-example in `docs/SECURITY.md` to reflect correct repository name.
+- [x] **BOOTSTRAP:** Update blueprint@example.com in `docs/SECURITY.md` to reflect correct contact.
 
 ### Setting up `src/`
-- [x] **BOOTSTRAP:** Update `src/package_name` directory.
-- [x] **BOOTSTRAP:** Update `package_name` in `src/package_name/__init__.py`.
-- [x] **BOOTSTRAP:** Update `package_name` imports in `src/package_name/main.py`.
+- [x] **BOOTSTRAP:** Update `src/python_project_blueprint_example` directory.
+- [x] **BOOTSTRAP:** Update `python_project_blueprint_example` in `src/python_project_blueprint_example/__init__.py`.
+- [x] **BOOTSTRAP:** Update `python_project_blueprint_example` imports in `src/python_project_blueprint_example/main.py`.
 
 ### Setting up `tests/`
-- [x] **BOOTSTRAP:** Update `package_name` in `tests/test_config.py`.
-- [x] **BOOTSTRAP:** Update `package_name` in `tests/test_logger.py`.
-- [x] **BOOTSTRAP:** Update `package_name` in `tests/test_main.py`.
+- [x] **BOOTSTRAP:** Update `python_project_blueprint_example` in `tests/test_config.py`.
+- [x] **BOOTSTRAP:** Update `python_project_blueprint_example` in `tests/test_logger.py`.
+- [x] **BOOTSTRAP:** Update `python_project_blueprint_example` in `tests/test_main.py`.
 
 ### Setting up `LICENSE.md`
-- [x] **BOOTSTRAP:** Update [[YEAR]] in `LICENSE.md`.
-- [x] **BOOTSTRAP:** Update [[USERNAME]] in `LICENSE.md`.
+- [x] **BOOTSTRAP:** Update 2026 in `LICENSE.md`.
+- [x] **BOOTSTRAP:** Update Pymetheus in `LICENSE.md`.
 
 ### Setting up `pyproject.toml`
 - [x] **BOOTSTRAP:** Update [project] metadata.
@@ -140,7 +140,7 @@ The workflow automatically updates the following sections:
 - [x] **BOOTSTRAP:** Update files in [tool.mypy].
 
 ### Setting up `README.md`
-- [x] **BOOTSTRAP:** Update [[REPO_NAME]] in `README.md`.
+- [x] **BOOTSTRAP:** Update python-project-blueprint-example in `README.md`.
 
 ### Deleting bootstrapping specific documents
 - [x] **BOOTSTRAP:** Delete `.github/workflows/bootstrap.yml`.

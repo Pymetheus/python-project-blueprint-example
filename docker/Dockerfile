@@ -1,1 +1,1 @@
-# This Dockerfile was generated for [[PACKAGE_NAME]]
+# This Dockerfile was generated for python_project_blueprint_example

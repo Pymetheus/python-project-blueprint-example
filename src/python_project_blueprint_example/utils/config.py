@@ -43,7 +43,7 @@ class Settings(BaseSettings):
     database_url: SecretStr = Field(default=SecretStr("sqlite:///./default.db"))
 
     # APP Settings
-    app_name: str = Field(default="package_name")
+    app_name: str = Field(default="python_project_blueprint_example")
 
     # Nested APP Settings
     database: DatabaseSettings = Field(default_factory=DatabaseSettings)
